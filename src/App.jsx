@@ -35,10 +35,8 @@ const App = () => {
         muted
         loop
         style={{
-          height: "100%",
           position: "absolute",
           zIndex: 1,
-          width: "100%",
         }}
       ></video>
       <div
@@ -66,7 +64,7 @@ const App = () => {
           <Route path="/administration/:id" element={<Administration />} />
           <Route path="/finance/:id" element={<Finance />} />
           <Route path="/gallery/:id" element={<Gallery />} />
-          <Route path="/flag/:id" element={<FlagsPage />} />
+          <Route path="/foc/:id" element={<FlagsPage />} />
           <Route path={`/past-commanding/:id`} element={<PastCommanding />} />
         </Routes>
       </AnimatePresence>

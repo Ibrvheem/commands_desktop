@@ -5,7 +5,10 @@
   "author": "iT Central Limited",
   "main": "public/electron.js",
   "build": {
-    "appId": "commands_desktop"
+    "appId": "commands_desktop",
+    "win": {
+      "icon": "public/icon.png"
+    }
   },
   "homepage": ".",
   "dependencies": {
