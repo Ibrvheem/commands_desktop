@@ -13,6 +13,8 @@ const createWindow = () => {
     webPreferences: {
       nodeIntegration: true,
     },
+    fullscreen: true, 
+    autoHideMenuBar: true
   });
 
   // and load the index.html of the app.

@@ -63,7 +63,7 @@ const DisplayCard = () => {
   );
 };
 
-const data = [
+const  data = [
   {
     id: 1,
     front: central,
@@ -78,13 +78,13 @@ const data = [
     height: "9.2105rem",
     width: "6.25rem",
   },
-  {
-    id: 3,
-    front: quorra,
-    lowerText: "Naval Ship Quorra",
-    height: "8.875rem",
-    width: "7.375rem",
-  },
+  // {
+  //   id: 3,
+  //   front: quorra,
+  //   lowerText: "Naval Ship Quorra",
+  //   height: "8.875rem",
+  //   width: "7.375rem",
+  // },
   {
     id: 4,
     front: logistic,
