@@ -3,7 +3,7 @@ import SideBar from "../components/SideBar";
 // import Transition from "../components/transition";
 import DetailsHeader from "../components/DetailsHeader";
 import { useParams } from "react-router-dom";
-import { centralData } from "../data";
+import { centralData } from '../components/data';
 import React from "react";
 import BackButton from "../components/BackButton";
 import { motion } from "framer-motion";

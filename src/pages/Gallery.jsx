@@ -6,7 +6,7 @@ import DetailsHeader from "../components/DetailsHeader";
 // import blankRectangle from "../assets/blank-rectangle.svg";
 import { ThumbnailsExample } from "../components/Carousel.tsx";
 import BackButton from "../components/BackButton.jsx";
-import { centralData } from "../data.js";
+import { centralData } from '../components/data';
 import { useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import central from "../assets/central.svg";
+import central from "../assets/central.png";
 import nignavy from "../assets/nignavy.svg";
 import western from "../assets/western.svg";
 import quorra from "../assets/quorra.png";
@@ -63,28 +63,21 @@ const DisplayCard = () => {
   );
 };
 
-const  data = [
+const data = [
   {
-    id: 1,
-    front: central,
-    lowerText: "Central Naval Command",
+    id: 5,
+    front: western,
+    lowerText: "Western Naval Command",
     height: "9.1875rem",
-    width: "6.25rem",
+    width: "6.8125rem",
   },
   {
-    id: 2,
-    front: nignavy,
-    lowerText: "Naval Doctrine Command",
-    height: "9.2105rem",
-    width: "6.25rem",
+    id: 3,
+    front: eastern,
+    lowerText: "Eastern Naval Command",
+    height: "9.1875rem",
+    width: "6.8125rem",
   },
-  // {
-  //   id: 3,
-  //   front: quorra,
-  //   lowerText: "Naval Ship Quorra",
-  //   height: "8.875rem",
-  //   width: "7.375rem",
-  // },
   {
     id: 4,
     front: logistic,
@@ -93,26 +86,38 @@ const  data = [
     width: "6.25rem",
   },
   {
-    id: 5,
-    front: training,
-    lowerText: "Naval Training Command",
+    id: 1,
+    front: central,
+    lowerText: "Central Naval Command",
     height: "9.1875rem",
-    width: "6.8125rem",
+    width: "6.25rem",
   },
+ 
   {
-    id: 6,
-    front: eastern,
-    lowerText: "Eastern Naval Command",
-    height: "9.1875rem",
-    width: "6.8125rem",
+    id: 2,
+    front: nignavy,
+    lowerText: "Naval Doctrine Command",
+    height: "9.2105rem",
+    width: "6.25rem",
   },
-  {
-    id: 7,
-    front: western,
-    lowerText: "Western Naval Command",
-    height: "9.1875rem",
-    width: "6.8125rem",
-  },
+ 
+  
+  // {
+  //   id: 3,
+  //   front: quorra,
+  //   lowerText: "Naval Ship Quorra",
+  //   height: "8.875rem",
+  //   width: "7.375rem",
+  // },
+
+  // {
+  //   id: 5,
+  //   front: training,
+  //   lowerText: "Naval Training Command",
+  //   height: "9.1875rem",
+  //   width: "6.8125rem",
+  // },
+  
 ];
 
 export default DisplayCard;

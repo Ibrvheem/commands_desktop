@@ -2,7 +2,7 @@ import { Box } from "@mui/material";
 import SideBar from "../components/SideBar";
 import DetailsHeader from "../components/DetailsHeader";
 import { useParams } from "react-router-dom";
-import { centralData } from "../data";
+import { centralData } from '../components/data';
 import BackButton from "../components/BackButton";
 import { motion } from "framer-motion";
 import "@splidejs/react-splide/css";
@@ -19,7 +19,9 @@ import { EffectCoverflow } from "swiper/modules";
 const PastCommanding = () => {
   const { id } = useParams();
 
-  const selectedItem = centralData[0]?.pastCommanding.find((item) => item.id === Number(id));
+  const selectedItem = centralData[0]?.pastCommanding.find(
+    (item) => item.id === Number(id)
+  );
 
   if (!selectedItem) {
     // Handle the case where the item is not found
@@ -31,9 +33,14 @@ const PastCommanding = () => {
           position: "relative",
         }}
       >
-        <SideBar></SideBar>
-        <DetailsHeader></DetailsHeader>
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 1, ease: "easeIn" }}>
+        <SideBar />
+        <DetailsHeader />
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 1, ease: "easeIn" }}
+        >
           <BackButton />
         </motion.div>
       </Box>
@@ -42,10 +49,18 @@ const PastCommanding = () => {
 
   return (
     <Box sx={{ display: "flex", justifyContent: "center" }}>
-      <Box sx={{ display: "flex", justifyContent: "space-between", width: "90%" }}>
+      <Box
+        sx={{ display: "flex", justifyContent: "space-between", width: "90%" }}
+      >
         <SideBar>
           <DetailsHeader>
-            <motion.div style={{ width: "80%", marginLeft: "4.5em" }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 1, ease: "easeIn" }}>
+            <motion.div
+              style={{ width: "80%", marginLeft: "4.5em" }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 1, ease: "easeIn" }}
+            >
               <div
                 className="splide_div"
                 style={{
@@ -55,40 +70,6 @@ const PastCommanding = () => {
                   justifyContent: "center",
                 }}
               >
-                {/* <Box
-                  sx={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                  }}
-                >
-                  <img
-                    src={selectedItem.image1}
-                    alt=""
-                    style={{ width: "26%" }}
-                  />
-                  <img
-                    src={selectedItem.image2}
-                    alt=""
-                    style={{ width: "23%" }}
-                  />
-                  <img
-                    src={selectedItem.image3}
-                    alt=""
-                    style={{ width: "18%" }}
-                  />
-                  <img
-                    src={selectedItem.image4}
-                    alt=""
-                    style={{ width: "15%" }}
-                  />
-                  <img
-                    src={selectedItem.image5}
-                    alt=""
-                    style={{ width: "13%" }}
-                  />
-                </Box> */}
-
                 <div className="container" style={{ marginTop: "6em" }}>
                   <Swiper
                     effect={"coverflow"}
@@ -105,21 +86,11 @@ const PastCommanding = () => {
                     modules={[EffectCoverflow]}
                     className="mySwiper"
                   >
-                    <SwiperSlide>
-                      <img src={selectedItem.image1} />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <img src={selectedItem.image2} />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <img src={selectedItem.image3} />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <img src={selectedItem.image4} />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <img src={selectedItem.image5} />
-                    </SwiperSlide>
+                    {selectedItem.images.map(imageItem => (
+                      <SwiperSlide key={imageItem.id}>
+                        <img src={imageItem.image} alt={`Image ${imageItem.id}`} style={{ width: "auto", height: "500px" }} />
+                      </SwiperSlide>
+                    ))}
                   </Swiper>
                 </div>
               </div>

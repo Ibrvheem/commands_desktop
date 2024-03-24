@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { Box } from "@mui/material";
 import { useParams } from "react-router-dom";
-import { centralData } from "../data";
+import { centralData } from "./data";
 import { motion } from "framer-motion";
 import BackButton from "./BackButton";
 

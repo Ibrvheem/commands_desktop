@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import SideBar from "../components/SideBar";
 // import Transition from "../components/transition";
-import { centralData } from "../data";
+import { centralData } from '../components/data';
 import { useParams } from "react-router-dom";
 import React from "react";
 import BackButton from "../components/BackButton";

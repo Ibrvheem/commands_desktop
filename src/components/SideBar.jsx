@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { Box, Button, Typography } from "@mui/material";
 import { Link, useLocation, useParams } from "react-router-dom";
-import { sidebarLinks } from "../data";
+import { sidebarLinks } from "./data";
 const SideBar = ({ children }) => {
   const location = useLocation();
   const { id } = useParams();

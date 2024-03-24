@@ -1,7 +1,7 @@
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { Options } from "@splidejs/splide";
 import React, { ReactNode } from "react";
-import { centralData } from "../data";
+import { centralData } from "./data";
 // import "@splidejs/react-splide/css";
 
 interface Slide {
